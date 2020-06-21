@@ -2,7 +2,6 @@ payload:
 # ABC
 DOMAIN-SUFFIX,edgedatg.com
 DOMAIN-SUFFIX,go.com
-
 # AbemaTV
 USER-AGENT,AbemaTV*
 DOMAIN,abematv.akamaized.net
