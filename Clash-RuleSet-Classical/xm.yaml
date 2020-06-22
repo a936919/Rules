@@ -1,0 +1,215 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+Proxy: null
+Proxy Group: null
+Rule: null
+proxy-provider:
+  unblockmusic:
+    type: http
+    path: ./unblockmusic.yaml
+    url: https://gfwsb.114514.best/sub?target=clash&url=ss%3A%2F%2FYWVzLTEyOC1nY206ZGVzcGVyYWRvai5jb21fZnJlZV9wcm94eV94ODBq%40music.desperadoj.com%3A30001%23%25E4%25BA%2591%25E9%259F%25B3%25E4%25B9%2590%25E8%25A7%25A3%25E9%2594%2581&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  HK:
+    type: http
+    path: ./HK.yaml
+    url: https://gfwsb.114514.best/sub?target=clash&url=https%3A%2F%2Fdy.xmshuju.xyz%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D3%26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  TW:
+    type: http
+    path: ./TW.yaml
+    url: https://gfwsb.114514.best/sub?target=clash&url=https%3A%2F%2Fdy.xmshuju.xyz%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D3%26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E5%8F%B0%E6%B9%BE
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  JP:
+    type: http
+    path: ./JP.yaml
+    url: https://gfwsb.114514.best/sub?target=clash&url=https%3A%2F%2Fdy.xmshuju.xyz%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D3%26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%97%A5%E6%9C%AC
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  SG:
+    type: http
+    path: ./SG.yaml
+    url: https://gfwsb.114514.best/sub?target=clash&url=https%3A%2F%2Fdy.xmshuju.xyz%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D3%26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%96%B0%E5%8A%A0%E5%9D%A1
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+proxy-groups:
+  - name: 🔰 节点选择
+    proxies:
+      - 🇭🇰HK-PROXY
+      - 🇹🇼TW-PROXY
+      - 🇯🇵JP-PROXY
+      - 🇸🇬SG-PROXY
+      - DIRECT
+    type: select
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+  - name: 🎵网易云解锁
+    use:
+      - unblockmusic
+    proxies:
+      - DIRECT
+    type: select
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+  - name: 🇭🇰HK-PROXY
+    type: url-test
+    use:
+      - HK
+    url: http://cp.cloudflare.com/generate_204
+    interval: 600
+  - name: 🇸🇬SG-PROXY
+    type: url-test
+    use:
+      - SG
+    url: http://cp.cloudflare.com/generate_204
+    interval: 600
+  - name: 🇯🇵JP-PROXY
+    type: url-test
+    use:
+      - JP
+    url: http://cp.cloudflare.com/generate_204
+    interval: 600
+  - name: 🇹🇼TW-PROXY
+    type: url-test
+    use:
+      - TW
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+rule-providers:
+  🔰 PROXY:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Proxy.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/PROXY.yaml
+    interval: 86400
+  🌍 国外媒体:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ProxyMedia.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyMedia.yaml
+    interval: 86400
+  🌏 国内媒体:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ChinaMedia.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ChinaMedia.yaml
+    interval: 86400
+  🎵网易云解锁:
+    type: http
+    behavior: classical
+    path: ./RuleSet/NeteaseMusic.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/NeteaseMusic.yaml
+    interval: 86400
+  Ⓜ️ 微软服务:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Microsoft.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Microsoft.yaml
+    interval: 86400
+  📲 电报信息:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Telegram.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Telegram.yaml
+    interval: 86400
+  🍎 苹果服务:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Apple.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Apple.yaml
+    interval: 86400
+  🎯 全球直连:
+    type: http
+    behavior: classical
+    path: ./RuleSet/CN.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/CCC-CN.yaml
+    interval: 86400
+  🛑 全球拦截:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Adblock.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Adblock/Adblock-Lite.yaml
+    interval: 86400
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/ChinaIP.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
+rules:
+  - RULE-SET,🔰 PROXY,🔰 节点选择
+  - RULE-SET,🎯 全球直连,🎯 全球直连
+  - RULE-SET,📲 电报信息,📲 电报信息
+  - RULE-SET,🍎 苹果服务,🍎 苹果服务
+  - RULE-SET,Ⓜ️ 微软服务,Ⓜ️ 微软服务
+  - RULE-SET,🎵网易云解锁,🎵网易云解锁
+  - RULE-SET,🌏 国内媒体,🌏 国内媒体
+  - RULE-SET,🌍 国外媒体,🌍 国外媒体
+  - RULE-SET,🛑 全球拦截,🛑 全球拦截
+  - RULE-SET,ChinaIP,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🐟 漏网之鱼
