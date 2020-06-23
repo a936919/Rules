@@ -1,6 +1,5 @@
 payload:
 # 代理列表
- 
 #MyList && Other
  - DOMAIN-SUFFIX,1password.com
  - DOMAIN-SUFFIX,bit.no.com
@@ -18,7 +17,6 @@ payload:
  - DOMAIN-SUFFIX,unsplash.com
  - DOMAIN-SUFFIX,xn--i2ru8q2qg.com
  - DOMAIN-SUFFIX,yunpanjingling.com
-
 #国外域名
  - DOMAIN-SUFFIX,eu
  - DOMAIN-SUFFIX,hk
@@ -28,7 +26,6 @@ payload:
  - DOMAIN-SUFFIX,tw
  - DOMAIN-SUFFIX,uk
  - DOMAIN-SUFFIX,us
-
 #国外域名关键字
  - DOMAIN-KEYWORD,1e100
  - DOMAIN-KEYWORD,abema
@@ -50,7 +47,6 @@ payload:
  - DOMAIN-KEYWORD,twitter
  - DOMAIN-KEYWORD,whatsapp
  - DOMAIN-KEYWORD,youtube
-
 #GFW list
  - DOMAIN-SUFFIX,030buy.com
  - DOMAIN-SUFFIX,0rz.tw
@@ -5529,7 +5525,6 @@ payload:
  - DOMAIN-SUFFIX,zzcartoon.com
  - DOMAIN-SUFFIX,zzcloud.me
  - DOMAIN-SUFFIX,zzux.com
-
 #Amazon
  - DOMAIN-SUFFIX,amazon.co.jp
  - DOMAIN-SUFFIX,amazon.com
@@ -5549,11 +5544,9 @@ payload:
  - IP-CIDR,54.156.0.0/14,no-resolve
  - IP-CIDR,54.226.0.0/15,no-resolve
  - IP-CIDR,54.230.156.0/22,no-resolve
-
 #BBC
  - DOMAIN-KEYWORD,uk-live
  - DOMAIN-SUFFIX,bbc.co
-
 #Developer 开发者常用国外网站、镜像和论坛
  - DOMAIN-SUFFIX,apache.org
  - DOMAIN-SUFFIX,docker.com
@@ -5574,13 +5567,11 @@ payload:
  - DOMAIN-SUFFIX,spring.io
  - DOMAIN-SUFFIX,spring.net
  - DOMAIN-SUFFIX,stackoverflow.com
-
 #Discord
  - DOMAIN-SUFFIX,discord.gg
  - DOMAIN-SUFFIX,discord.media
  - DOMAIN-SUFFIX,discordapp.com
  - DOMAIN-SUFFIX,discordapp.net
-
 #Facebook
  - DOMAIN-SUFFIX,facebook.com
  - DOMAIN-SUFFIX,fb.com
@@ -5600,14 +5591,12 @@ payload:
  - IP-CIDR,173.252.64.0/18,no-resolve
  - IP-CIDR,179.60.192.0/22,no-resolve
  - IP-CIDR,185.60.216.0/22,no-resolve
-
 #Github
  - DOMAIN-SUFFIX,github.com
  - DOMAIN-SUFFIX,github.io
  - DOMAIN-SUFFIX,githubapp.com
  - DOMAIN-SUFFIX,githubassets.com
  - DOMAIN-SUFFIX,githubusercontent.com
-
 #Google
  - DOMAIN-SUFFIX,1e100.net
  - DOMAIN-SUFFIX,2mdn.net
@@ -5628,13 +5617,11 @@ payload:
  - DOMAIN-SUFFIX,ytimg.com
  - IP-CIDR,74.125.0.0/16,no-resolve
  - IP-CIDR,173.194.0.0/16,no-resolve
-
 #Instagram
  - DOMAIN-SUFFIX,cdninstagram.com
  - DOMAIN-SUFFIX,instagram.com
  - DOMAIN-SUFFIX,instagr.am
  - DOMAIN-SUFFIX,akamaihd.net
-
 # Kakao Talk
  - DOMAIN-SUFFIX,kakao.com
  - DOMAIN-SUFFIX,kakao.co.kr
@@ -5645,7 +5632,6 @@ payload:
  - IP-CIDR,103.246.56.0/22,no-resolve
  - IP-CIDR,110.76.140.0/22,no-resolve
  - IP-CIDR,113.61.104.0/22,no-resolve
-
 #Line
  - DOMAIN-SUFFIX,lin.ee
  - DOMAIN-SUFFIX,line-apps.com
@@ -5735,7 +5721,6 @@ payload:
  - IP-CIDR6,2001:67c:4e8::/48,no-resolve
  - IP-CIDR6,2001:b28:f23d::/48,no-resolve
  - IP-CIDR6,2001:b28:f23f::/48,no-resolve
-
 #Whatsapp
  - IP-CIDR,18.194.0.0/15,no-resolve
  - IP-CIDR,34.224.0.0/12,no-resolve
@@ -5752,7 +5737,6 @@ payload:
  - IP-CIDR,158.85.224.160/27,no-resolve
  - IP-CIDR,75.126.150.0/16,no-resolve
  - IP-CIDR,69.171.235.0/16,no-resolve
-
 #飞流直播
  - DOMAIN-SUFFIX,neulion.com
  - DOMAIN-SUFFIX,icntv.xyz
