@@ -138,7 +138,7 @@ rule-providers:
     path: ./RuleSet/Proxy.yaml
     url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/PROXY.yaml
     interval: 86400
-  🙈 Google:
+ 🙈 Google:
     type: http
     behavior: classical
     path: ./RuleSet/Proxy.yaml
