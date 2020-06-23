@@ -11,7 +11,7 @@ proxy-provider:
   unblockmusic:
     type: http
     path: ./unblockmusic.yaml
-    url: https://gfwsb.114514.best/sub?target=clash&url=ss%3A%2F%2FYWVzLTEyOC1nY206ZGVzcGVyYWRvai5jb21fZnJlZV9wcm94eV94ODBq%40music.desperadoj.com%3A30001%23%25E4%25BA%2591%25E9%259F%25B3%25E4%25B9%2590%25E8%25A7%25A3%25E9%2594%2581&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false
+    url: https://wz.my/unblockmusic
     interval: 3600
     health-check:
       enable: true
@@ -75,8 +75,7 @@ proxy-groups:
   - name: 🎵网易云解锁
     use:
       - unblockmusic
-    proxies:
-      - DIRECT
+    proxies: []
     type: select
   - name: Ⓜ️ 微软服务
     type: select
@@ -192,7 +191,7 @@ rule-providers:
     path: ./RuleSet/Adblock.yaml
     url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Adblock/Adblock-Lite.yaml
     interval: 86400
-  ChinaIP:
+  🚩 ChinaIP:
     type: http
     behavior: ipcidr
     path: ./RuleSet/hinaIP.yaml
@@ -209,7 +208,7 @@ rules:
   - RULE-SET,🌏 国内媒体,🌏 国内媒体
   - RULE-SET,🌍 国外媒体,🌍 国外媒体
   - RULE-SET,🛑 全球拦截,🛑 全球拦截
-  - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,🚩 ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
