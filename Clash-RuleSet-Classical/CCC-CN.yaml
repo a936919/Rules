@@ -8,6 +8,7 @@ payload:
  - DOMAIN-SUFFIX,kaikeba.com
  - DOMAIN-SUFFIX,laomo.me
  - DOMAIN-SUFFIX,seedme.club
+ - DOMAIN-SUFFIX,ccyy.store
  - DOMAIN-SUFFIX,mpyit.com
 # CN域名直连
  - DOMAIN-SUFFIX,cn
