@@ -138,6 +138,12 @@ rule-providers:
     path: ./RuleSet/Proxy.yaml
     url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/PROXY.yaml
     interval: 86400
+  🙈 Google:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Proxy.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Google.yaml
+    interval: 86400
   🌍 国外媒体:
     type: http
     behavior: classical
@@ -194,6 +200,7 @@ rule-providers:
     interval: 86400
 rules:
   - RULE-SET,🔰 PROXY,🔰 节点选择
+  - RULE-SET,🙈 Google,🔰 节点选择
   - RULE-SET,🎯 全球直连,🎯 全球直连
   - RULE-SET,📲 电报信息,📲 电报信息
   - RULE-SET,🍎 苹果服务,🍎 苹果服务
