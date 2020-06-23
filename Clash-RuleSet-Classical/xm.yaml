@@ -132,11 +132,17 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
 rule-providers:
-  🔰 PROXY:
+  🔰 ProxyGFWlist:
     type: http
-    behavior: classical
-    path: ./RuleSet/PorxyGFWlist.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/PorxyGFWlist.yaml
+    behavior: domain
+    path: ./RuleSet/ProxyGFWlist.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyGFWlist.yaml
+    interval: 86400
+  🔰 Proxy:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Proxyt.yaml
+    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Proxy
     interval: 86400
   🌍 国外媒体:
     type: http
@@ -189,11 +195,12 @@ rule-providers:
   ChinaIP:
     type: http
     behavior: ipcidr
-    path: ./RuleSet/Extra/ChinaIP.yaml
+    path: ./RuleSet/hinaIP.yaml
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
-  - RULE-SET,🔰 PROXY,🔰 节点选择
+  - RULE-SET,🔰 ProxyGFWlist,🔰 节点选择
+  - RULE-SET,🔰 Proxy,🔰 节点选择
   - RULE-SET,🎯 全球直连,🎯 全球直连
   - RULE-SET,📲 电报信息,📲 电报信息
   - RULE-SET,🍎 苹果服务,🍎 苹果服务
