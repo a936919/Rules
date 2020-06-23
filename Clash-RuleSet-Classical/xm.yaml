@@ -164,7 +164,7 @@ rule-providers:
     interval: 86400
   Ⓜ️ 微软服务:
     type: http
-    behavior: classical
+    behavior: domain
     path: ./RuleSet/Microsoft.yaml
     url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Microsoft.yaml
     interval: 86400
