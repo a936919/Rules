@@ -11,7 +11,7 @@ proxy-provider:
   unblockmusic:
     type: http
     path: ./unblockmusic.yaml
-    url: https://wz.my/unblockmusic
+    url: https://wz.my/music
     interval: 3600
     health-check:
       enable: true
