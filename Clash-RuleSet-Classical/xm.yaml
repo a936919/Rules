@@ -179,17 +179,29 @@ rule-providers:
     path: ./RuleSet/Apple.yaml
     url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Apple.yaml
     interval: 86400
-  🎯 全球直连:
+  🎯 全球直连 Domains:
     type: http
-    behavior: classical
-    path: ./RuleSet/CN.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/CCC-CN.yaml
+    behavior: domain
+    url: 'https://ruleset.dev/clash_domestic_services_domains'
+    path: ./RuleSet/CN.yamlclash_domestic_services_domains
     interval: 86400
-  🛑 全球拦截:
+  🎯 全球直连 IPs:
     type: http
-    behavior: classical
-    path: ./RuleSet/Adblock.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Adblock/Adblock-Lite.yaml
+    behavior: ipcidr
+    url: 'https://ruleset.dev/clash_domestic_services_ips'
+    path: ./RuleSet/CN.yamlclash_domestic_services_ips
+    interval: 86400
+  🛑 全球拦截 Domains:
+    type: http
+    behavior: domain
+    url: 'https://ruleset.dev/clash_reject_domains'
+    path: ./RuleSet/clash_reject_domains
+    interval: 86400
+  🛑 全球拦截 IPs:
+    type: http
+    behavior: ipcidr
+    url: 'https://ruleset.dev/clash_reject_ips'
+    path: ./RuleSet/clash_reject_ips
     interval: 86400
   🚩 ChinaIP:
     type: http
@@ -198,16 +210,18 @@ rule-providers:
     url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
+  - RULE-SET,🛑 全球拦截 Domains,🛑 全球拦截
+  - RULE-SET,🛑 全球拦截 IPs,🛑 全球拦截
   - RULE-SET,🔰 ProxyGFWlist,🔰 节点选择
   - RULE-SET,🔰 Proxy,🔰 节点选择
-  - RULE-SET,🎯 全球直连,🎯 全球直连
   - RULE-SET,📲 电报信息,📲 电报信息
   - RULE-SET,🍎 苹果服务,🍎 苹果服务
   - RULE-SET,Ⓜ️ 微软服务,Ⓜ️ 微软服务
   - RULE-SET,🎵网易云解锁,🎵网易云解锁
   - RULE-SET,🌏 国内媒体,🌏 国内媒体
   - RULE-SET,🌍 国外媒体,🌍 国外媒体
-  - RULE-SET,🛑 全球拦截,🛑 全球拦截
+  - RULE-SET,🎯 全球直连 Domains,🎯 全球直连
+  - RULE-SET,🎯 全球直连 IPs,🎯 全球直连
   - RULE-SET,🚩 ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
