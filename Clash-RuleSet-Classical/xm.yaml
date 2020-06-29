@@ -72,7 +72,6 @@ proxy-groups:
   - name: 🎵网易云解锁
     use:
       - unblockmusic
-    proxies: []
     type: select
   - name: Ⓜ️ 微软服务
     type: select
