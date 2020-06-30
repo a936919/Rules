@@ -4,7 +4,7 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
-proxy-provider:
+proxy-providers:
   unblockmusic:
     type: http
     path: ./unblockmusic.yaml
