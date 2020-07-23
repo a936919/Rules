@@ -17,7 +17,7 @@ proxy-providers:
   HK:
     type: http
     path: ./HK.yaml
-    url: https://gfwsb.114514.best/sub?target=clashr&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF
+    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF
     interval: 3600
     health-check:
       enable: true
@@ -26,7 +26,7 @@ proxy-providers:
   TW:
     type: http
     path: ./TW.yaml
-    url: https://gfwsb.114514.best/sub?target=clashr&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E5%8F%B0%E6%B9%BE
+    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E5%8F%B0%E6%B9%BE
     interval: 3600
     health-check:
       enable: true
@@ -35,7 +35,7 @@ proxy-providers:
   JP:
     type: http
     path: ./JP.yaml
-    url: https://gfwsb.114514.best/sub?target=clashr&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%97%A5%E6%9C%AC
+    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%97%A5%E6%9C%AC
     interval: 3600
     health-check:
       enable: true
@@ -44,7 +44,7 @@ proxy-providers:
   SG:
     type: http
     path: ./SG.yaml
-    url: https://gfwsb.114514.best/sub?target=clashr&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%96%B0%E5%8A%A0%E5%9D%A1
+    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%96%B0%E5%8A%A0%E5%9D%A1
     interval: 3600
     health-check:
       enable: true
