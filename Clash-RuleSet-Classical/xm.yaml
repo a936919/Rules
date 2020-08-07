@@ -8,7 +8,7 @@ proxy-providers:
   unblockmusic:
     type: http
     path: ./unblockmusic.yaml
-    url: https://wz.my/music
+    url: https://sub.ccyy.store/sub?target=clash&new_name=true&url=https://cdn.jsdelivr.net/gh/DesperadoJ/Rules-for-UnblockNeteaseMusic/Clash/Proxy/NeteaseMusic.yaml&insert=false&include=%E8%A7%A3%E9%94%81&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
