@@ -131,49 +131,49 @@ rule-providers:
     type: http
     behavior: domain
     path: ./RuleSet/ProxyGFWlist.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyGFWlist.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyGFWlist.yaml
     interval: 86400
   🔰 Proxy:
     type: http
     behavior: ipcidr
     path: ./RuleSet/Proxyt.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Proxy
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Proxy
     interval: 86400
   🌍 国外媒体:
     type: http
     behavior: classical
     path: ./RuleSet/ProxyMedia.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyMedia.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyMedia.yaml
     interval: 86400
   🌏 国内媒体:
     type: http
     behavior: classical
     path: ./RuleSet/ChinaMedia.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ChinaMedia.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ChinaMedia.yaml
     interval: 86400
   🎵网易云解锁:
     type: http
     behavior: classical
     path: ./RuleSet/NeteaseMusic.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/NeteaseMusic.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/NeteaseMusic.yaml
     interval: 86400
   Ⓜ️ 微软服务:
     type: http
     behavior: domain
     path: ./RuleSet/Microsoft.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Microsoft.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Microsoft.yaml
     interval: 86400
   📲 电报信息:
     type: http
     behavior: classical
     path: ./RuleSet/Telegram.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Telegram.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Telegram.yaml
     interval: 86400
   🍎 苹果服务:
     type: http
     behavior: classical
     path: ./RuleSet/Apple.yaml
-    url: https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Apple.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Apple.yaml
     interval: 86400
   🎯 全球直连 Domains:
     type: http
@@ -203,7 +203,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     path: ./RuleSet/hinaIP.yaml
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
   - RULE-SET,🛑 全球拦截 Domains,🛑 全球拦截
