@@ -17,7 +17,7 @@ proxy-providers:
   HK:
     type: http
     path: ./HK.yaml
-    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF26extend%3D1&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E9%A6%99%E6%B8%AF
+    url: https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fpptp.cloud%2Fsub%2FyTguiCxYQwc4k4pa.html&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&include=%E9%A6%99%E6%B8%AF
     interval: 3600
     health-check:
       enable: true
@@ -26,7 +26,7 @@ proxy-providers:
   TW:
     type: http
     path: ./TW.yaml
-    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E5%8F%B0%E6%B9%BE
+    url: https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fpptp.cloud%2Fsub%2FyTguiCxYQwc4k4pa.html&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&include=%E5%8F%B0%E6%B9%BE
     interval: 3600
     health-check:
       enable: true
@@ -35,7 +35,7 @@ proxy-providers:
   JP:
     type: http
     path: ./JP.yaml
-    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%97%A5%E6%9C%AC
+    url: https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fpptp.cloud%2Fsub%2FyTguiCxYQwc4k4pa.html&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&include=%E6%97%A5%E6%9C%AC
     interval: 3600
     health-check:
       enable: true
@@ -44,7 +44,7 @@ proxy-providers:
   SG:
     type: http
     path: ./SG.yaml
-    url: https://sub.ccyy.store/sub?target=clash&url=https%3A%2F%2Fstardream.me%2Flink%2Fi3xPbabAiKh7Itbu%3Fsub%3D1&emoji=false&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=false&include=%E6%96%B0%E5%8A%A0%E5%9D%A1
+    url: https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Fpptp.cloud%2Fsub%2FyTguiCxYQwc4k4pa.html&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&include=%E6%96%B0%E5%8A%A0%E5%9D%A1
     interval: 3600
     health-check:
       enable: true
@@ -178,25 +178,25 @@ rule-providers:
   🎯 全球直连 Domains:
     type: http
     behavior: domain
-    url: 'https://ruleset.dev/clash_domestic_services_domains'
+    url: https://ruleset.dev/clash_domestic_services_domains
     path: ./RuleSet/CN.yamlclash_domestic_services_domains
     interval: 86400
   🎯 全球直连 IPs:
     type: http
     behavior: ipcidr
-    url: 'https://ruleset.dev/clash_domestic_services_ips'
+    url: https://ruleset.dev/clash_domestic_services_ips
     path: ./RuleSet/CN.yamlclash_domestic_services_ips
     interval: 86400
   🛑 全球拦截 Domains:
     type: http
     behavior: domain
-    url: 'https://ruleset.dev/clash_reject_domains'
+    url: https://ruleset.dev/clash_reject_domains
     path: ./RuleSet/clash_reject_domains
     interval: 86400
   🛑 全球拦截 IPs:
     type: http
     behavior: ipcidr
-    url: 'https://ruleset.dev/clash_reject_ips'
+    url: https://ruleset.dev/clash_reject_ips
     path: ./RuleSet/clash_reject_ips
     interval: 86400
   🚩 ChinaIP:
@@ -206,6 +206,7 @@ rule-providers:
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
+  - DOMAIN,1090ys1.com,DIRECT
   - RULE-SET,🛑 全球拦截 Domains,🛑 全球拦截
   - RULE-SET,🛑 全球拦截 IPs,🛑 全球拦截
   - RULE-SET,🔰 ProxyGFWlist,🔰 节点选择
