@@ -189,8 +189,8 @@ rule-providers:
     path: ./RuleSet/hinaIP.yaml
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
-rules:
-  - DOMAIN,1090ys1.com,DIRECT
+rules: 
+  - DOMAIN,1090ys2.com,DIRECT
   - RULE-SET,🛑 全球拦截 Domains,🛑 全球拦截
   - RULE-SET,🛑 全球拦截 IPs,🛑 全球拦截
   - RULE-SET,🔰 ProxyGFWlist,🔰 节点选择
