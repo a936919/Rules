@@ -41,12 +41,32 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  HK:
+    type: http
+    path: ./HK.yaml
+    url: https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Featpeach.top%2Flink%2FN7jIZevj7rIx1eNG%3Fsub%3D3&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&include=%E9%A6%99%E6%B8%AF
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  USA:
+    type: http
+    path: ./USA.yaml
+    url: https://subcon.dlj.tf/sub?target=clash&url=https%3A%2F%2Featpeach.top%2Flink%2FN7jIZevj7rIx1eNG%3Fsub%3D3&emoji=true&list=true&sort=false&udp=false&tfo=false&scv=false&append_type=false&fdn=true&new_name=true&include=%E7%BE%8E%E5%9B%BD
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300     
 proxy-groups:
   - name: 🔰 节点选择
     proxies:
       - RU-PROXY
       - TW-PROXY
       - JP-PROXY
+      - HK-PROXY
+      - USA-PROXY
       - DIRECT
     type: select
   - name: 🌍 国外媒体
@@ -110,6 +130,18 @@ proxy-groups:
       - TW
     url: http://www.gstatic.com/generate_204
     interval: 600
+  - name: HK-PROXY
+    type: url-test
+    use:
+      - HK
+    url: http://www.gstatic.com/generate_204
+    interval: 600  
+  - name: USA-PROXY
+    type: url-test
+    use:
+      - USA
+    url: http://www.gstatic.com/generate_204
+    interval: 600    
 rule-providers:
   🔰 ProxyGFWlist:
     type: http
@@ -189,8 +221,12 @@ rule-providers:
     path: ./RuleSet/hinaIP.yaml
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
-rules: 
+rules:
   - DOMAIN,1090ys2.com,DIRECT
+  - DOMAIN,www.yun.cn,🔰 节点选择
+  - DOMAIN,na.op.gg,🔰 节点选择
+  - DOMAIN,ximalaya.com,🔰 节点选择
+  - DOMAIN,1090ys1.com,DIRECT
   - RULE-SET,🛑 全球拦截 Domains,🛑 全球拦截
   - RULE-SET,🛑 全球拦截 IPs,🛑 全球拦截
   - RULE-SET,🔰 ProxyGFWlist,🔰 节点选择
