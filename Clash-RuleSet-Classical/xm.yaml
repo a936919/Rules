@@ -93,6 +93,11 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+  - name: 🤺 SpeedTest
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -179,6 +184,12 @@ rule-providers:
     path: ./RuleSet/Microsoft.yaml
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Microsoft.yaml
     interval: 86400
+  🤺 SpeedTest:
+    type: http
+    behavior: classical
+    path: ./RuleSet/SpeedTest.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/SpeedTest.yaml
+    interval: 86400
   📲 电报信息:
     type: http
     behavior: classical
@@ -239,6 +250,7 @@ rules:
   - RULE-SET,🌍 国外媒体,🌍 国外媒体
   - RULE-SET,🎯 全球直连 Domains,🎯 全球直连
   - RULE-SET,🎯 全球直连 IPs,🎯 全球直连
+  - RULE-SET,🤺 SpeedTest,🤺 SpeedTest
   - RULE-SET,🚩 ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
