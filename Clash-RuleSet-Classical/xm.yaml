@@ -61,7 +61,7 @@ proxy-providers:
 proxy-groups:
   - name: 🔰 节点选择
     proxies:
-      - RU-PROXY
+      - KOR-PROXY
       - TW-PROXY
       - JP-PROXY
       - HK-PROXY
