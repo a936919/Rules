@@ -17,7 +17,7 @@ proxy-providers:
   KOR:
     type: http
     path: ./KOR.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E9%9F%A9%E5%9B%BD&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&include=%E6%96%B0%E5%8A%A0%E5%9D%A1&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
