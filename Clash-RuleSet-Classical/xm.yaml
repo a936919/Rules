@@ -17,7 +17,7 @@ proxy-providers:
   KOR:
     type: http
     path: ./KOR.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&include=%E6%96%B0%E5%8A%A0%E5%9D%A1&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E9%9F%A9%E5%9B%BD&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
@@ -68,6 +68,11 @@ proxy-groups:
       - USA-PROXY
       - DIRECT
     type: select
+  - name: 📼 bilibili
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -92,7 +97,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-  - name: 🤺 SpeedTest
+  - name: ⚡ SpeedTest
     type: select
     proxies:
       - 🔰 节点选择
@@ -117,31 +122,31 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
   - name: KOR-PROXY
-    type: select
+    type: url-test
     use:
       - KOR
     url: http://cp.cloudflare.com/generate_204
     interval: 600
   - name: JP-PROXY
-    type: select
+    type: url-test
     use:
       - JP
     url: http://cp.cloudflare.com/generate_204
     interval: 600
   - name: TW-PROXY
-    type: select
+    type: url-test
     use:
       - TW
     url: http://www.gstatic.com/generate_204
     interval: 600
   - name: HK-PROXY
-    type: select
+    type: url-test
     use:
       - HK
     url: http://www.gstatic.com/generate_204
     interval: 600  
   - name: USA-PROXY
-    type: select
+    type: url-test
     use:
       - USA
     url: http://www.gstatic.com/generate_204
@@ -159,6 +164,12 @@ rule-providers:
     path: ./RuleSet/Proxyt.yaml
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Proxy
     interval: 86400
+  📼 bilibili:
+    type: http
+    behavior: classical
+    path: ./RuleSet/bilibili.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/7f8cf70cf5842527123126b5c4d7e01160c5edd0/Clash-RuleSet-Classical/Domestic-Services/BiliBili.yaml
+    interval: 86400 
   🌍 国外媒体:
     type: http
     behavior: classical
@@ -183,7 +194,7 @@ rule-providers:
     path: ./RuleSet/Microsoft.yaml
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Microsoft.yaml
     interval: 86400
-  🤺 SpeedTest:
+  ⚡ SpeedTest:
     type: http
     behavior: classical
     path: ./RuleSet/SpeedTest.yaml
@@ -232,6 +243,7 @@ rule-providers:
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
+  - RULE-SET,📼 bilibili,📼 bilibili
   - DOMAIN,1090ys2.com,DIRECT
   - DOMAIN,www.yun.cn,🔰 节点选择
   - DOMAIN,na.op.gg,🔰 节点选择
@@ -249,7 +261,7 @@ rules:
   - RULE-SET,🌍 国外媒体,🌍 国外媒体
   - RULE-SET,🎯 全球直连 Domains,🎯 全球直连
   - RULE-SET,🎯 全球直连 IPs,🎯 全球直连
-  - RULE-SET,🤺 SpeedTest,🤺 SpeedTest
+  - RULE-SET,⚡ SpeedTest,⚡ SpeedTest
   - RULE-SET,🚩 ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
