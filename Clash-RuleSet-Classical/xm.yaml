@@ -122,31 +122,31 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
   - name: KOR-PROXY
-    type: url-test
+    type: select
     use:
       - KOR
     url: http://cp.cloudflare.com/generate_204
     interval: 600
   - name: JP-PROXY
-    type: url-test
+    type: select
     use:
       - JP
     url: http://cp.cloudflare.com/generate_204
     interval: 600
   - name: TW-PROXY
-    type: url-test
+    type: select
     use:
       - TW
     url: http://www.gstatic.com/generate_204
     interval: 600
   - name: HK-PROXY
-    type: url-test
+    type: select
     use:
       - HK
     url: http://www.gstatic.com/generate_204
     interval: 600  
   - name: USA-PROXY
-    type: url-test
+    type: select
     use:
       - USA
     url: http://www.gstatic.com/generate_204
