@@ -17,7 +17,7 @@ proxy-providers:
   KOR:
     type: http
     path: ./KOR.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E9%9F%A9%E5%9B%BD&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E9%9F%A9%E5%9B%BD&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
@@ -26,7 +26,7 @@ proxy-providers:
   TW:
     type: http
     path: ./TW.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E5%8F%B0%E6%B9%BE&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E5%8F%B0%E6%B9%BE&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -34,7 +34,7 @@ proxy-providers:
   JP:
     type: http
     path: ./JP.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E6%97%A5%E6%9C%AC&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E6%97%A5%E6%9C%AC&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
@@ -43,7 +43,7 @@ proxy-providers:
   HK:
     type: http
     path: ./HK.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E9%A6%99%E6%B8%AF&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E9%A6%99%E6%B8%AF&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
@@ -52,7 +52,7 @@ proxy-providers:
   USA:
     type: http
     path: ./USA.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.fun%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E7%BE%8E%E5%9B%BD&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
+    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fcatcloud.shop%2Flink%2FuhZ1eHidVuEBQiBQ%3Fsub%3D3%26extend%3D1&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%E7%BE%8E%E5%9B%BD&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false
     interval: 3600
     health-check:
       enable: true
