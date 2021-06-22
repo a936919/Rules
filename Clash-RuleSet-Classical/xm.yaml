@@ -17,7 +17,7 @@ proxy-providers:
   TW:
     type: http
     path: ./TW.yaml
-    url: https://suo.yt/vWNdYew
+    url: https://suo.yt/sNw8kZs
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -25,7 +25,7 @@ proxy-providers:
   JP:
     type: http
     path: ./JP.yaml
-    url: https://suo.yt/ZadvT7I
+    url: https://suo.yt/AQxDrKV
     interval: 3600
     health-check:
       enable: true
@@ -34,7 +34,7 @@ proxy-providers:
   HK:
     type: http
     path: ./HK.yaml
-    url: https://suo.yt/1VgY9Kr
+    url: https://suo.yt/rLxWq9N
     interval: 3600
     health-check:
       enable: true
@@ -43,7 +43,7 @@ proxy-providers:
   USA:
     type: http
     path: ./USA.yaml
-    url: https://suo.yt/3qA3gx1
+    url: https://suo.yt/0UfB7Zm
     interval: 3600
     health-check:
       enable: true
