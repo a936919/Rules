@@ -17,7 +17,7 @@ proxy-providers:
   TW:
     type: http
     path: ./TW.yaml
-    url: https://suo.yt/sNw8kZs
+    url: https://suo.yt/bzDWUbp
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -25,7 +25,7 @@ proxy-providers:
   JP:
     type: http
     path: ./JP.yaml
-    url: https://suo.yt/AQxDrKV
+    url: https://suo.yt/ZNjSeM0
     interval: 3600
     health-check:
       enable: true
@@ -34,35 +34,35 @@ proxy-providers:
   HK:
     type: http
     path: ./HK.yaml
-    url: https://suo.yt/rLxWq9N
+    url: https://suo.yt/N2Ns3vR
     interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  USA:
+  SG:
     type: http
-    path: ./USA.yaml
-    url: https://suo.yt/0UfB7Zm
+    path: ./SG.yaml
+    url: https://suo.yt/hYQo79V
     interval: 3600
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300     
+      interval: 300
 proxy-groups:
   - name: 🔰 节点选择
     proxies:
       - TW-PROXY
       - JP-PROXY
       - HK-PROXY
-      - USA-PROXY
+      - SG-PROXY
       - DIRECT
     type: select
   - name: 📼 bilibili
-    type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+    type: select
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -128,32 +128,26 @@ proxy-groups:
     use:
       - HK
     url: http://www.gstatic.com/generate_204
-    interval: 600  
-  - name: USA-PROXY
+    interval: 600
+  - name: SG-PROXY
     type: select
     use:
-      - USA
+      - SG
     url: http://www.gstatic.com/generate_204
-    interval: 600    
+    interval: 600
 rule-providers:
-  🔰 ProxyGFWlist:
-    type: http
-    behavior: domain
-    path: ./RuleSet/ProxyGFWlist.yaml
-    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/ProxyGFWlist.yaml
-    interval: 86400
   🔰 Proxy:
     type: http
-    behavior: ipcidr
-    path: ./RuleSet/Proxyt.yaml
-    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/Proxy
+    behavior: classical
+    path: ./RuleSet/Proxy.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/PROXY.yaml
     interval: 86400
   📼 bilibili:
     type: http
     behavior: classical
     path: ./RuleSet/bilibili.yaml
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/7f8cf70cf5842527123126b5c4d7e01160c5edd0/Clash-RuleSet-Classical/Domestic-Services/BiliBili.yaml
-    interval: 86400 
+    interval: 86400
   🌍 国外媒体:
     type: http
     behavior: classical
@@ -170,7 +164,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/NeteaseMusic.yaml
-    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/a936919/Rules/master/Clash-RuleSet-Classical/NeteaseMusic.yaml
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/240f16d0076f2e776ac471dba01ffb6c521edea7/Clash-RuleSet-Classical/Domestic-Services/NeteaseMusic.yaml
     interval: 86400
   Ⓜ️ 微软服务:
     type: http
@@ -199,26 +193,14 @@ rule-providers:
   🎯 全球直连 Domains:
     type: http
     behavior: domain
-    url: https://ruleset.dev/clash_domestic_services_domains
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/Domestic.yaml
     path: ./RuleSet/CN.yamlclash_domestic_services_domains
-    interval: 86400
-  🎯 全球直连 IPs:
-    type: http
-    behavior: ipcidr
-    url: https://ruleset.dev/clash_domestic_services_ips
-    path: ./RuleSet/CN.yamlclash_domestic_services_ips
     interval: 86400
   🛑 全球拦截 Domains:
     type: http
     behavior: domain
-    url: https://ruleset.dev/clash_reject_domains
+    url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/LM-Firefly/Rules/master/Clash-RuleSet-Classical/Adblock/Adblock.yaml
     path: ./RuleSet/clash_reject_domains
-    interval: 86400
-  🛑 全球拦截 IPs:
-    type: http
-    behavior: ipcidr
-    url: https://ruleset.dev/clash_reject_ips
-    path: ./RuleSet/clash_reject_ips
     interval: 86400
   🚩 ChinaIP:
     type: http
@@ -227,24 +209,21 @@ rule-providers:
     url: https://cors.ccyy.workers.dev/?https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
     interval: 86400
 rules:
-  - RULE-SET,📼 bilibili,📼 bilibili
   - DOMAIN,1090ys2.com,DIRECT
   - DOMAIN,www.yun.cn,🔰 节点选择
   - DOMAIN,na.op.gg,🔰 节点选择
   - DOMAIN,ximalaya.com,🔰 节点选择
   - DOMAIN,1090ys1.com,DIRECT
   - RULE-SET,🛑 全球拦截 Domains,🛑 全球拦截
-  - RULE-SET,🛑 全球拦截 IPs,🛑 全球拦截
-  - RULE-SET,🔰 ProxyGFWlist,🔰 节点选择
   - RULE-SET,🔰 Proxy,🔰 节点选择
   - RULE-SET,📲 电报信息,📲 电报信息
   - RULE-SET,🍎 苹果服务,🍎 苹果服务
+  - RULE-SET,📼 bilibili,📼 bilibili
   - RULE-SET,Ⓜ️ 微软服务,Ⓜ️ 微软服务
   - RULE-SET,🎵网易云解锁,🎵网易云解锁
   - RULE-SET,🌏 国内媒体,🌏 国内媒体
   - RULE-SET,🌍 国外媒体,🌍 国外媒体
   - RULE-SET,🎯 全球直连 Domains,🎯 全球直连
-  - RULE-SET,🎯 全球直连 IPs,🎯 全球直连
   - RULE-SET,⚡ SpeedTest,⚡ SpeedTest
   - RULE-SET,🚩 ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
