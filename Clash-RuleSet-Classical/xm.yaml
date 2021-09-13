@@ -8,12 +8,6 @@ dns:
     enhanced-mode: redir-host
     fake-ip-range: 198.18.0.1/16
     use-hosts: true
-    fake-ip-filter:                # fake ip white domain list, aka Always Real IP
-     - '*.lan'
-     - localhost.ptlogin2.qq.com
-     - "dns.msftncsi.com"
-     - "www.msftncsi.com"
-     - "www.msftconnecttest.com"  
     nameserver:
      - https://dns.alidns.com/dns-query
      - https://dns.pub/dns-query
@@ -22,7 +16,27 @@ dns:
      - https://1.1.1.1/dns-query
      - https://dns.google/dns-query
      - tls://dns.google:853
-
+    fake-ip-filter:                # fake ip white domain list, aka Always Real IP
+     - '*.lan'
+     - localhost.ptlogin2.qq.com
+     - "dns.msftncsi.com"
+     - "www.msftncsi.com"
+     - "www.msftconnecttest.com"
+    fallback-filter:
+       geoip: true
+       ipcidr:
+         - 240.0.0.0/4
+         - 0.0.0.0/32
+         - 127.0.0.1/32
+       domain:
+         - +.google.com
+         - +.facebook.com
+         - +.twitter.com
+         - +.youtube.com
+         - +.xn--ngstr-lra8j.com
+         - +.google.cn
+         - +.googleapis.cn
+         - +.gvt1.com
 external-controller: 127.0.0.1:9090
 proxy-providers:
   unblockmusic:
