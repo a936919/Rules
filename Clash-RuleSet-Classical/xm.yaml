@@ -19,9 +19,9 @@ dns:
   fake-ip-filter:
     - "*.lan"
     - localhost.ptlogin2.qq.com
-    - dns.msftncsi.com
-    - www.msftncsi.com
-    - www.msftconnecttest.com
+    - "dns.msftncsi.com"
+    - "www.msftncsi.com"
+    - "www.msftconnecttest.com"
   fallback-filter:
     geoip: true
     ipcidr:
@@ -94,7 +94,6 @@ proxy-groups:
     type: select
   - name: 📼 bilibili
     proxies:
-      - unblockmusic
       - 🔰 节点选择
       - 🎯 全球直连
     type: select
@@ -108,6 +107,10 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+  - name: 🎵网易云解锁
+    use:
+      - unblockmusic
+    type: select
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -142,12 +145,6 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-  - name: unblockmusic
-    type: select
-    use:
-      - unblockmusic
-    url: http://cp.cloudflare.com/generate_204
-    interval: 600
   - name: JP-PROXY
     type: select
     use:
@@ -257,6 +254,7 @@ rules:
   - RULE-SET,🍎 苹果服务,🍎 苹果服务
   - RULE-SET,📼 bilibili,📼 bilibili
   - RULE-SET,Ⓜ️ 微软服务,Ⓜ️ 微软服务
+  - RULE-SET,🎵网易云解锁,🎵网易云解锁
   - RULE-SET,🌏 国内媒体,🌏 国内媒体
   - RULE-SET,🌍 国外媒体,🌍 国外媒体
   - RULE-SET,🎯 全球直连 Domains,🎯 全球直连
