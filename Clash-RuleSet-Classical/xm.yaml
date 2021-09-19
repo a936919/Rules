@@ -19,9 +19,9 @@ dns:
   fake-ip-filter:
     - "*.lan"
     - localhost.ptlogin2.qq.com
-    - "dns.msftncsi.com"
-    - "www.msftncsi.com"
-    - "www.msftconnecttest.com"
+    - dns.msftncsi.com
+    - www.msftncsi.com
+    - www.msftconnecttest.com
   fallback-filter:
     geoip: true
     ipcidr:
@@ -107,9 +107,10 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-  - name: 🎵网易云解锁
-    use:
-      - unblockmusic
+  - name: 🎵网易云解锁  
+    proxies:
+      - 🎵 网易云代理
+      - 🎯 全球直连
     type: select
   - name: Ⓜ️ 微软服务
     type: select
@@ -167,6 +168,12 @@ proxy-groups:
     type: select
     use:
       - SG
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+  - name: 🎵 网易云代理
+    type: select
+    use:
+      - unblockmusic
     url: http://www.gstatic.com/generate_204
     interval: 600
 rule-providers:
