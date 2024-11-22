@@ -52,7 +52,7 @@ DOMAIN-SUFFIX,nivodi.com
 DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,ipwho.is
-DOMAIN-SUFFIX,z-lib.gs
+DOMAIN-KEYWORD,z-lib
 
 
 IP-CIDR,8.8.8.8/32,no-resolve
